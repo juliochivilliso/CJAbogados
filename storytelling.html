@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chevalier & Jiménez - Galería de Imágenes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Estilos del header */
+        .header-area {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .main-header-area {
+            padding: 15px 0;
+        }
+        
+        .logo-img img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .main-menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .main-menu ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+        
+        .main-menu ul li a {
+            color: #053a2a;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .main-menu ul li a:hover, 
+        .main-menu ul li a.active {
+            color: #057c41;
+        }
+        
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            width: 200px;
+            padding: 10px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .main-menu ul li:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .submenu li {
+            margin: 0;
+            padding: 5px 20px;
+        }
+        
+        .social_media_links ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .social_media_links ul li {
+            margin-left: 15px;
+        }
+        
+        .social_media_links ul li a {
+            color: #053a2a;
+            font-size: 18px;
+        }
+        
+        /* Estilos de la galería */
+        .gallery-container {
+            margin-top: 90px; /* Para compensar el header fijo */
+        }
+        
+        .image-block {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        
+        .image-container {
+            max-width: 90%;
+            max-height: 90vh;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Colores de fondo alternados */
+        .block-1 { background-color: #ffffff; }
+        .block-2 { background-color: #f0f0f0; }
+        .block-3 { background-color: #e6f2ed; }
+        .block-4 { background-color: #ffffff; }
+        .block-5 { background-color: #f8f8f8; }
+        .block-6 { background-color: #053a2a; }
+        .block-7 { background-color: #ffffff; }
+        .block-8 { background-color: #057c41; }
+        .block-9 { background-color: #f0f0f0; }
+        .block-10 { background-color: #ffffff; }
+        .block-11 { background-color: #e6f2ed; }
+        
+        /* Estilos del footer */
+        .footer {
+            background-color: #053a2a;
+            color: white;
+        }
+        
+        .footer_top {
+            padding: 70px 0 40px;
+        }
+        
+        .footer_widget {
+            margin-bottom: 30px;
+        }
+        
+        .footer_logo img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .footer_text, .domain {
+            color: #b1b1b1;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        
+        .domain:hover {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .socail_links ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .socail_links ul li {
+            margin-right: 15px;
+        }
+        
+        .socail_links ul li a {
+            color: white;
+            font-size: 16px;
+        }
+        
+        .footer_title {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .footer_widget ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .footer_widget ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer_widget ul li a {
+            color: #b1b1b1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer_widget ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .newsletter_form {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter_form input {
+            width: 100%;
+            height: 45px;
+            background: white;
+            border: none;
+            padding: 0 15px;
+            border-radius: 4px;
+        }
+        
+        .newsletter_form button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 45px;
+            border: none;
+            background: #057c41;
+            color: white;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .newsletter_text {
+            color: #b1b1b1;
+            font-size: 14px;
+        }
+        
+        .footer_border {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .copy_right {
+            color: #b1b1b1;
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-menu {
+                display: none;
+            }
+            
+            .mobile_menu {
+                display: block;
+            }
+            
+            .gallery-container {
+                margin-top: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- header-start -->
+    <header>
+        <div class="header-area " style="background-color: black;">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img src="img/logov2.png" width="172" height="57" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html">home</a></li>
+                                        <li><a   class="active" href="#">Sobre Nosotros <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="about.html">Nuestros Valores</a></li>
+                                                <li><a href="storytelling.html">Storytelling</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a   href="about.html">Nuestro Equipo <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="naram.html">Naram Jiménez Logroño</a></li>
+                                                <li><a href="jhonatthan.html">Jhonattan Chevalier Jourdain</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="Practice.html">Area de Práctica</a></li>
+                                        <li><a href="contact.html">Contacto</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 d-none d-lg-block">
+                            <div class="social_media_links">
+                                <ul>
+                                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <div class="gallery-container">
+        <!-- Bloque 1 -->
+        <div class="image-block block-1">
+            <div class="image-container">
+                <img src="img/001.png" alt="Chevalier & Jiménez - Versión 1">
+            </div>
+        </div>
+        
+        <!-- Bloque 2 -->
+        <div class="image-block block-2">
+            <div class="image-container">
+                <img src="img/002.png" alt="Chevalier & Jiménez - Versión 2">
+            </div>
+        </div>
+        
+        <!-- Bloque 3 -->
+        <div class="image-block block-3">
+            <div class="image-container">
+                <img src="img/003.png" alt="Chevalier & Jiménez - Versión 3">
+            </div>
+        </div>
+        
+        <!-- Bloque 4 -->
+        <div class="image-block block-4">
+            <div class="image-container">
+                <img src="img/004.png" alt="Chevalier & Jiménez - Versión 4">
+            </div>
+        </div>
+        
+        <!-- Bloque 5 -->
+        <div class="image-block block-5">
+            <div class="image-container">
+                <img src="img/005.png" alt="Chevalier & Jiménez - Versión 5">
+            </div>
+        </div>
+        
+        <!-- Bloque 6 -->
+        <div class="image-block block-6">
+            <div class="image-container">
+                <img src="img/006.png" alt="Chevalier & Jiménez - Versión 6">
+            </div>
+        </div>
+        
+        <!-- Bloque 7 -->
+        <div class="image-block block-7">
+            <div class="image-container">
+                <img src="img/007.png" alt="Chevalier & Jiménez - Versión 7">
+            </div>
+        </div>
+        
+        <!-- Bloque 8 -->
+        <div class="image-block block-8">
+            <div class="image-container">
+                <img src="img/008.png" alt="Chevalier & Jiménez - Versión 8">
+            </div>
+        </div>
+        
+        <!-- Bloque 9 -->
+        <div class="image-block block-9">
+            <div class="image-container">
+                <img src="img/009.png" alt="Chevalier & Jiménez - Versión 9">
+            </div>
+        </div>
+        
+        <!-- Bloque 10 -->
+        <div class="image-block block-10">
+            <div class="image-container">
+                <img src="img/010.png" alt="Chevalier & Jiménez - Versión 10">
+            </div>
+        </div>
+        
+        <!-- Bloque 11 -->
+        <div class="image-block block-11">
+            <div class="image-container">
+                <img src="img/011.png" alt="Chevalier & Jiménez - Versión 11">
+            </div>
+        </div>
+    </div>
+
+    <!-- footer_start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="index.html">
+                                    <img src="img/logov2.png" width="172" height="57" alt="">
+                                </a>
+                            </div>
+                            <p class="footer_text">
+                                Edificio la Isla, Piso 1, Naco, de la ciudad de Santo Domingo de Guzmán, Distrito Nacional, capital de la República Dominicana<br>
+                                Teléfono: 849-816-6785 y 829-975-1600<br>
+                                <a class="domain" href="mailto:info@cjabogadosrd.com">info@cjabogadosrd.com</a></p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/cjabogados">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Area de Practica
+                            </h3>
+                            <ul>
+                                <li><a href="#">Business law
+                                    </a></li>
+                                <li><a href="#">Derecho Corporativo</a></li>
+                                <li><a href="#">Derecho Administrativo</a></li>
+                                <li><a href="#">Derecho Energético</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Enlaces útiles
+                            </h3>
+                            <ul>
+                                <li><a href="#">Sobre Nosotros</a></li>
+                                <li><a href="#">Nuestro Equipo</a></li>
+                                <li><a href="#">Area de Practica</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Suscribir
+                            </h3>
+                            <form action="#" class="newsletter_form">
+                                <input type="text" placeholder="Enter your mail">
+                                <button type="submit">Inscribirse</button>
+                            </form>
+                            <p class="newsletter_text">Suscríbete al boletín para recibir actualizaciones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end -->
+
+    <!-- Scripts opcionales para funcionalidad adicional -->
+    <script>
+        // Hacer header sticky al hacer scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header-area');
+            if (window.scrollY > 100) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>
