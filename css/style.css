@@ -878,7 +878,7 @@ h3 {
   left: 0;
   top: 140%;
   background: #fff;
-  width: 200px;
+  width: 324px;
   z-index: 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
   opacity: 0;
@@ -1096,7 +1096,7 @@ h3 {
   line-height: 68px;
   position: relative;
   z-index: 8;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 
 @media (max-width: 767px) {
@@ -2368,7 +2368,7 @@ h3 {
 
 /* line 105, C:/Users/SPN Graphics/Desktop/CL September/211 Lawyer/HTML/scss/_elements.scss */
 h4 {
-  font-size: 20px;
+  font-size: 23px;
 }
 
 /* line 109, C:/Users/SPN Graphics/Desktop/CL September/211 Lawyer/HTML/scss/_elements.scss */
